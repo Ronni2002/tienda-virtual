@@ -1,0 +1,15 @@
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\bin\Debug\net7.0\OnlineStore.Application.deps.json
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\bin\Debug\net7.0\OnlineStore.Application.dll
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\bin\Debug\net7.0\OnlineStore.Application.pdb
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\bin\Debug\net7.0\OnlineStore.Domain.dll
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\bin\Debug\net7.0\OnlineStore.Domain.pdb
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\obj\Debug\net7.0\OnlineStore.Application.csproj.AssemblyReference.cache
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\obj\Debug\net7.0\OnlineStore.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\obj\Debug\net7.0\OnlineStore.Application.AssemblyInfoInputs.cache
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\obj\Debug\net7.0\OnlineStore.Application.AssemblyInfo.cs
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\obj\Debug\net7.0\OnlineStore.Application.csproj.CoreCompileInputs.cache
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\obj\Debug\net7.0\OnlineStore.Application.csproj.CopyComplete
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\obj\Debug\net7.0\OnlineStore.Application.dll
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\obj\Debug\net7.0\refint\OnlineStore.Application.dll
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\obj\Debug\net7.0\OnlineStore.Application.pdb
+C:\Users\RonnyFlorian\Documents\CLARO\OnlineStore\OnlineStore.Application\obj\Debug\net7.0\ref\OnlineStore.Application.dll

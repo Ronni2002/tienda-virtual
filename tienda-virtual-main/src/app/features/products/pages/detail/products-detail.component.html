@@ -1,0 +1,60 @@
+  <nz-card nzTitle="Detalle de producto" [nzExtra]="extraTemplate" *ngIf="product">
+    <div nz-row [nzGutter]="16">
+      <div nz-col class="gutter-row" [nzSpan]="6">
+        <div class="inner-box">
+          <img
+            id="colorTag"
+            nz-image
+            width="200px"
+            height="200px"
+            nzSrc="error"
+            [nzFallback]="fallback"
+            [ngStyle]="{ 'border-color': selectedColor }"
+            alt=""
+          />
+        </div>
+      </div>
+      <div nz-col class="gutter-row" [nzSpan]="18">
+        <div class="inner-box">
+          <nz-descriptions [nzTitle]="product.name">
+            <nz-descriptions-item nzTitle="Descipcion" [nzSpan]="3">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </nz-descriptions-item>
+            <nz-descriptions-item nzTitle="Marca" [nzSpan]="3">
+              <nz-tag [nzColor]="'magenta'">
+                {{product.marca}}
+              </nz-tag>
+            </nz-descriptions-item>
+            <nz-descriptions-item nzTitle="Costo" [nzSpan]="3">
+              {{cost ? cost : product.productByPrices[0].cost}}
+            </nz-descriptions-item>
+            <nz-descriptions-item nzTitle="Opinion" [nzSpan]="3">
+              <nz-rate [(ngModel)]="value" [nzTooltips]="tooltips"></nz-rate>
+              <span *ngIf="value" class="ant-rate-text">
+                {{value ? tooltips[value - 1] : ""}}
+              </span>
+            </nz-descriptions-item>
+            <nz-descriptions-item nzTitle="Colores disponibles:" [nzSpan]="3">
+              <nz-radio-group
+                [(ngModel)]="selectedColor"
+                nzButtonStyle="solid"
+                (ngModelChange)="selectColor($event)"
+              >
+                <label
+                  nz-radio-button
+                  id="radio-button"
+                  *ngFor="let option of product.productByPrices"
+                  [nzValue]="option"
+                  >{{ option.color }}
+                </label>
+              </nz-radio-group>
+            </nz-descriptions-item>
+          </nz-descriptions>
+        </div>
+      </div>
+    </div>
+  </nz-card>
+
+  <ng-template #extraTemplate>
+    <a [routerLink]="['/products/update', product.id]">Editar producto</a>
+  </ng-template>

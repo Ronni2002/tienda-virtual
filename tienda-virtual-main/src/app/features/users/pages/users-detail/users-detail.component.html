@@ -1,0 +1,38 @@
+<nz-card nzTitle="Detalle de usuario" [nzExtra]="extraTemplate">
+  <div nz-row [nzGutter]="16">
+    <div nz-col class="gutter-row" [nzSpan]="6">
+      <div class="inner-box">
+        <img
+          id="colorTag"
+          nz-image
+          width="200px"
+          height="200px"
+          [nzSrc]="user.avatar"
+          alt=""
+        />
+      </div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="18">
+      <div class="inner-box">
+        <nz-descriptions>
+          <nz-descriptions-item nzTitle="Nombre" [nzSpan]="3">{{
+            user.first_name
+          }}</nz-descriptions-item>
+          <nz-descriptions-item nzTitle="Apellido" [nzSpan]="3">{{
+            user.last_name
+          }}</nz-descriptions-item>
+          <nz-descriptions-item nzTitle="Usuario" [nzSpan]="3">{{
+            user.first_name | lowercase
+          }}</nz-descriptions-item>
+          <nz-descriptions-item nzTitle="Correo Electronico" [nzSpan]="3">{{
+            user.email
+          }}</nz-descriptions-item>
+        </nz-descriptions>
+      </div>
+    </div>
+  </div>
+</nz-card>
+
+<ng-template #extraTemplate>
+  <a [routerLink]="['/users/update', user.id]">Editar usuario</a>
+</ng-template>

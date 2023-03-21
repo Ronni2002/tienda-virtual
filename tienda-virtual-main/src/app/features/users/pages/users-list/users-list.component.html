@@ -1,0 +1,33 @@
+<nz-card nzTitle="Usuario" [nzExtra]="extraTemplate">
+  <nz-table #basicTable [nzData]="listOfData" [nzFrontPagination]="false">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Usuario</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>
+          <nz-avatar
+            nzIcon="user"
+            nzSize="large"
+            [nzSrc]="data.avatar"
+          ></nz-avatar>
+          {{ data.name }}
+        </td>
+        <td>{{ data.username }}</td>
+        <td>
+          <a [routerLink]="['/users/detail', data.id]">Detalle</a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a>Eliminar</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</nz-card>
+
+<ng-template #extraTemplate>
+  <button nz-button routerLink="/users/create">Crear usuario</button>
+</ng-template>

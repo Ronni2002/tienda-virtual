@@ -1,0 +1,107 @@
+<nz-card nzTitle="Creacion de productos">
+  <form nz-form [formGroup]="productForm">
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired>Nombre</nz-form-label>
+      <nz-form-control
+        [nzSm]="14"
+        [nzXs]="24"
+        nzErrorTip="El campo es inválido"
+      >
+        <input nz-input formControlName="name" id="name" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired>Marca</nz-form-label>
+      <nz-form-control
+        [nzSm]="14"
+        [nzXs]="24"
+        nzErrorTip="El campo es inválido"
+      >
+        <input nz-input type="text" id="marca" formControlName="marca" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <div formArrayName="productByPrices">
+      <div *ngFor="let item of productByPrices.controls; index as productIndex">
+        <div nz-row [nzGutter]="16" [formGroupName]="productIndex">
+          <div nz-col class="gutter-row" [nzSpan]="8">
+            <div class="inner-box">
+              <nz-form-item>
+                <nz-form-label [nzSm]="6" nzFor="color" nzRequired
+                  >Color</nz-form-label
+                >
+                <nz-form-control [nzSm]="14" nzErrorTip="El campo es inválido">
+                  <input
+                    nz-input
+                    type="text"
+                    id="color"
+                    formControlName="color"
+                  />
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+
+          <div nz-col class="gutter-row" [nzSpan]="8">
+            <div class="inner-box">
+              <nz-form-item>
+                <nz-form-label [nzSm]="6" nzFor="marca" nzRequired
+                  >Costo</nz-form-label
+                >
+                <nz-form-control [nzSm]="14" nzErrorTip="El campo es inválido">
+                  <input
+                    nz-input
+                    type="text"
+                    id="cost"
+                    formControlName="cost"
+                  />
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+
+          <div nz-col class="gutter-row" [nzSpan]="4">
+            <div class="inner-box">
+              <nz-form-item>
+                <nz-form-control [nzSpan]="14" [nzOffset]="6">
+                  <button
+                    nz-button
+                    nzType="primary"
+                    (click)="addProductPrice()"
+                  >
+                    +
+                  </button>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+
+          <div nz-col class="gutter-row" [nzSpan]="4">
+            <div class="inner-box">
+              <nz-form-item>
+                <nz-form-control [nzSpan]="14" [nzOffset]="6">
+                  <button
+                    nz-button
+                    nzType="primary"
+                    (click)="removeProductPrice(productIndex)"
+                  >
+                    -
+                  </button>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nz-form-item nz-row class="register-area">
+      <nz-form-control [nzSpan]="14" [nzOffset]="10">
+        <button nz-button nzType="primary" (click)="saveOrUpdate()">
+          {{ this.isUpdatedForm ? "Actualizar producto" : "Agregar producto" }}
+        </button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</nz-card>
